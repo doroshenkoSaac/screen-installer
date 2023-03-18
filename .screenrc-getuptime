@@ -1,0 +1,26 @@
+#!/bin/bash
+uptime=$(</proc/uptime)
+uptime=${uptime%%.*}
+result=""
+while getopts "dhms" param; do
+ case ${param} in
+ s)
+ seconds=$(( uptime%60 ))
+ result=$result$seconds
+ ;;
+ m)
+ minutes=$(( uptime/60%60 ))
+ result=$result$minutes":"
+ ;;
+ h)
+ hours=$(( uptime/60/60%24 ))
+ result=$result$hours":"
+ ;;
+ d)
+ days=$(( uptime/60/60/24 ))
+ result=$result$days" days "
+ ;;
+ esac
+done
+echo $resul
+

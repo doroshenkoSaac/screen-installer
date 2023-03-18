@@ -1,0 +1,14 @@
+vbell off
+startup_message off
+defscrollback 10000
+shelltitle "> |bash"
+shell -$SHELL
+# enable SHIFT-PGUP / SHIFT-PGDOWN scroll
+termcapinfo xterm ti@:te@
+termcapinfo xterm 'hs:ts=;:fs=:ds=;'
+backtick 1 1 1 /home/saac/.screenrc-getuptime -dhms
+caption always '%{= d} %= %{= w} %-w %{+b r} %n * %t %{-b r} %{= w} %+w %='
+hardstatus alwayslastline '%{= Y} Host: %H %{= M} Uptime: %1` %{= G} Load: %l %= %{= C}%C %A = %c:%{=B R}%s%{= C} %{= B}%D %d %M(%m) %Y'
+# #alt-q and alt-w
+bindkey "^[w" next
+bindkey "^[q" prev
