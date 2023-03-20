@@ -89,8 +89,8 @@ function removeScreenConfigFromBashrs {
 
 printLine;
 echo "1) Install and configure screen in one click. You need have sudo yum install"
-echo "2) Configure screen. create files .screenrc, .screen-getuptime in you home direcroy. Configure script will addden in your .bashrc"
-echo "3) Remove all configure scripst"
+echo "2) Configure screen. create files .screenrc, .screen-getuptime in you home directory. Configure script will be adden in your .bashrc"
+echo "3) Remove all configure scripts"
 read -p "Change your choice: " dosmth;
 printLine;
 
